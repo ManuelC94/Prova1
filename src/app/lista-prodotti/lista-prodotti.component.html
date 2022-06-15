@@ -1,1 +1,23 @@
-<p>lista-prodotti works!</p>
+<p>Lista dei prodotti</p>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Marca</th>
+                <th>Prezzo</th>
+                <th>Descrizione</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of listaProdotti">
+                <td>{{product.id}}</td>
+                <td><a [routerLink]="['/products',product.id]">{{product.nome}}</a></td>
+                <td>{{product.marca}}</td>
+                <td>{{product.prezzo}}</td>
+                <td>{{product.descrizione}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
