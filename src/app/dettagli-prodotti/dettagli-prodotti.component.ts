@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DettagliProdottiComponent implements OnInit {
 
-  prodotto:Prodotto | undefined;
+  prodotto:Prodotto | undefined
   constructor(
     private route : ActivatedRoute
   ) { }
@@ -19,7 +19,7 @@ export class DettagliProdottiComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const prodottoIdFromRoute = Number(routeParams.get('productId'));
 
-    this.prodotto= prodotti.find(product => product.id ===prodottoIdFromRoute);
+    this.prodotto = prodotti.find(product => product.id === prodottoIdFromRoute);
   }
 
 }
