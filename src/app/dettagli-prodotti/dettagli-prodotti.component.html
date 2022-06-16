@@ -1,6 +1,7 @@
 <p>Dettagli Prodotto</p>
 
-<div *ngif="prodotto">
-    <!-- <h2>{{prodotto.id}}</h2> -->
+<div *ngIf="prodotto"> <!-- questo prodotto deve essere scritto nello stesso modo in cui ho scritto nel dettagli prodotti component ts il prodotto del find -->
+    <h2>{{prodotto.nome}}</h2>
+    <p>{{prodotto.marca}}</p>
 
 </div>
